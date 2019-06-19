@@ -29,4 +29,12 @@ public class ProductController {
         return modelAndView;
     }
 
+    @RequestMapping("/save.do")
+    public String save(Product product){
+
+        productService.save(product);
+
+        return "redirect:findAll.do";
+    }
+
 }
