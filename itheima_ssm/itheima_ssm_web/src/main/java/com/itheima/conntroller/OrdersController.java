@@ -52,4 +52,14 @@ public class OrdersController {
         return modelAndView;
     }
 
+    @RequestMapping("/findById.do")
+    public ModelAndView findById(@RequestParam(name = "id")String id){
+     Orders orders=   ordersService.findById(id);
+
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.addObject("orders",orders);
+        modelAndView.setViewName("orders_show");
+        return modelAndView;
+    }
+
 }

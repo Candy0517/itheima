@@ -17,7 +17,7 @@ public class Utils {
 
     }
 
-    public static String date2string(Date date,String patt) throws ParseException {
+    public static String date2string(Date date,String patt)  {
 
         SimpleDateFormat sdf = new SimpleDateFormat(patt);
 
